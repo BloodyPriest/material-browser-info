@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Browser Info</title>
+	<meta charset="utf-8">
+	<!--Material Design Styles and JS-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Browser Info</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="index.html">Variant 1</a>
+        <a class="mdl-navigation__link" href="var2.html">Variant 2</a>
+        <a class="mdl-navigation__link" href="var3.html">Variant 3</a>
+        <a class="mdl-navigation__link" href="var4.html">Download</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="index.html">Variant 1</a>
+      <a class="mdl-navigation__link" href="var2.html">Variant 2</a>
+      <a class="mdl-navigation__link" href="var3.html">Variant 3</a>
+      <a class="mdl-navigation__link" href="var4.html">Download</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here --></div>
+  </main>
+</div>
+<center>
+<!-- Wide card with share menu button -->
+<style>
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('http://img.blogs.es/anexom/wp-content/uploads/2009/07/python_code.png') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Your browser info</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <script type="text/Javascript">
+        document.write("<strong>Browser name:</strong> "+navigator.appName+"<BR>");
+        document.write("<strong>Version:</strong> "+navigator.appVersion+"<BR>");
+        document.write("<strong>Language:</strong> "+navigator.language+"<BR>");
+        document.write("<strong>Platform:</strong> "+navigator.platform+"<BR>");
+        document.write("<strong>Full browser name:</strong> "+navigator.userAgent+"<BR>");
+</script> 
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Okay
+    </a>
+  </div>
+  <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">share</i>
+    </button>
+  </div>
+</div>
+</center>
+</body>
+</html>
